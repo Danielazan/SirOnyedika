@@ -4,17 +4,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react'; // or your icon library
 // Images
-import img1 from "../assets/hero1.png"
-import img2 from "../assets/hero2.png"
-import img3 from "../assets/hero3.png"
-import img4 from "../assets/hero4.png"
-import img5 from "../assets/hero5.png"
-import img6 from "../assets/hero6.png"
+import img1 from "../../assets/hero1.png"
+import img2 from "../../assets/hero2.png"
+import img3 from "../../assets/hero3.png"
+import img4 from "../../assets/hero4.png"
+import img5 from "../../assets/hero5.png"
+import img6 from "../../assets/hero6.png"
 // Icons
-import Ship from "../assets/shipicon.png"
-import MoneyBag from "../assets/moneybagIcon.png"
-import Wallet from "../assets/walletIcon.png"
-import Support from "../assets/supportIcon.png"
+import Ship from "../../assets/shipicon.png"
+import MoneyBag from "../../assets/moneybagIcon.png"
+import Wallet from "../../assets/walletIcon.png"
+import Support from "../../assets/supportIcon.png"
 
 // Main Hero Section Component
 const Hero = () => {
@@ -308,7 +308,7 @@ const Hero = () => {
       <div className="w-full bg-white py-6 md:py-8 px-4 md:mt-40">
         <div className="max-w-7xl mx-auto ">
           {/* Features Grid Container */}
-          <div className="grid md:grid-cols-4 grid-cols-1 gap-10 md:gap-10 ">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-10 md:gap-10 ">
             {features.map((feature) => (
               /* Individual Feature Card - Animates sequentially */
               <motion.div
