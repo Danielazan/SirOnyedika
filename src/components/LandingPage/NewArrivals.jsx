@@ -124,13 +124,13 @@ const NewArrivals = () => {
           variants={gridVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 "
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 justify-items-center"
         >
           {products.map((product, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
-              className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 w-60"
+              className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 w-40 md:w-60 "
             >
               {/* ==================== PRODUCT IMAGE ==================== */}
               <div className="relative aspect-square bg-gray-50 overflow-hidden">
@@ -155,7 +155,7 @@ const NewArrivals = () => {
                   {product.name}
                 </h3>
 
-                <div className="mt-auto flex items-center justify-between">
+                <div className="mt-auto flex flex-col md:flex-row items-center justify-between">
                   <span className="text-xl font-bold text-gray-900">
                     ${product.price.toFixed(2)}
                   </span>
@@ -164,7 +164,7 @@ const NewArrivals = () => {
                     className="
                       px-5 py-2.5 bg-orange-500 text-white text-sm font-medium
                       rounded-full hover:bg-orange-600 active:bg-orange-700
-                      transition-colors duration-200 shadow-sm 
+                      transition-colors duration-200 shadow-sm md:mt-0 mt-5 
                     "
                   >
                     Add to Cart

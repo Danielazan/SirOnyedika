@@ -26,33 +26,32 @@ const AboutUs = () => {
     };
 
     return (
-        <section className="bg-red-800 h-auto">
+        <section className="h-auto">
             <div className="max-w-7xl mx-auto ">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
-                    className="flex item-center w-full justify-between"
+                    className="flex item-center flex-col w-full justify-between"
                 >
-                    <div className='w-full'>
-                        <p className="text-orange-500 text-xl md:text-2xl font-medium tracking-wide">
-                            About <span className="text-gray-900">Us</span>
-                        </p>
-                    </div>
 
                     <motion.div
                         variants={sectionVariants}
-                        className="w-full relative overflow-hidden lg:h-[520px] bg-cover bg-center bg-no-repeat flex items-end justify-end" style={{ backgroundImage: `url(${AboutBg})` }}
+                        className="w-full relative overflow-hidden lg:h-[620px] bg-cover bg-center bg-no-repeat flex items-end justify-end" style={{ backgroundImage: `url(${AboutBg})` }}
                     >
 
-                        <motion.div variants={sectionVariants} className="w-3/4 h-full bg-white rounded-tl-[100%] rounded-bl-[100%] space-y-8 lg:space-y-10">
+                        <motion.div variants={sectionVariants} className="w-2/4 flex flex-col items-center h-full bg-white rounded-tl-[100%] rounded-bl-[100%] space-y-8 lg:space-y-10 ">
                             {/* ==================== SMALL LABEL "About Us" ==================== */}
-
+                            <div className='mt-7'>
+                                <p className="text-orange-500 text-xl md:text-2xl font-medium tracking-wide">
+                                    About <span className="text-gray-900">Us</span>
+                                </p>
+                            </div>
 
                             {/* ==================== MAIN HEADING ==================== */}
                             {/* Split line + emphasis on "everyday confidence" */}
-                            <h2 className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
+                            <h2 className="text-2xl md:text-2lg  font-bold tracking-tight text-black leading-tight font-[Poppins]">
                                 Designed for your
                                 <br />
                                 <span className="text-gray-900">everyday confidence</span>
@@ -60,14 +59,14 @@ const AboutUs = () => {
 
                             {/* ==================== BODY TEXT ==================== */}
                             {/* Exact paragraph spacing, neutral color, readable line height */}
-                            <div className="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-                                <p>
+                            <div className="w-75 space-y-6 text-base md:text-base text-black leading-snug font-[Poppins]">
+                                <p className='text-center'>
                                     Our brand brings fashion and self-care together in one seamless shopping experience. From
                                     stylish outfits to skincare and haircare essentials, every product is carefully selected to
                                     help you look and feel your best.
                                 </p>
 
-                                <p>
+                                <p className='text-center'>
                                     We believe confidence starts with how you care for yourself. That's why we focus on quality,
                                     simplicity, and pieces that fit effortlessly into your lifestyle. Whether you're updating
                                     your wardrobe or refreshing your routine, we're here to make self-expression easy,
