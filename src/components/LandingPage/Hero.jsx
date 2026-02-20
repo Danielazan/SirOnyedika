@@ -308,7 +308,7 @@ const Hero = () => {
       <div className="w-full bg-white py-6 md:py-8 px-4 md:mt-40">
         <div className="max-w-7xl mx-auto ">
           {/* Features Grid Container */}
-          <div className="grid md:grid-cols-4 grid-cols-2 gap-10 md:gap-10 ">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-16 md:gap-10 ">
             {features.map((feature) => (
               /* Individual Feature Card - Animates sequentially */
               <motion.div

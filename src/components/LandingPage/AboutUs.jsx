@@ -41,7 +41,7 @@ const AboutUs = () => {
                         className="w-full relative overflow-hidden lg:h-[620px] bg-cover bg-center bg-no-repeat flex items-end justify-end" style={{ backgroundImage: `url(${AboutBg})` }}
                     >
 
-                        <motion.div variants={sectionVariants} className="w-2/4 flex flex-col items-center h-full bg-white rounded-tl-[100%] rounded-bl-[100%] space-y-8 lg:space-y-10 ">
+                        <motion.div variants={sectionVariants} className="w-3/4 md:w-2/4 flex flex-col items-center h-full bg-white rounded-tl-[100%] rounded-bl-[100%] space-y-8 lg:space-y-10 ">
                             {/* ==================== SMALL LABEL "About Us" ==================== */}
                             <div className='mt-7'>
                                 <p className="text-orange-500 text-xl md:text-2xl font-medium tracking-wide">
@@ -51,7 +51,7 @@ const AboutUs = () => {
 
                             {/* ==================== MAIN HEADING ==================== */}
                             {/* Split line + emphasis on "everyday confidence" */}
-                            <h2 className="text-2xl md:text-2lg  font-bold tracking-tight text-black leading-tight font-[Poppins]">
+                            <h2 className="text-xl md:text-2lg  font-bold tracking-tight text-black leading-tight font-[Poppins] text-center">
                                 Designed for your
                                 <br />
                                 <span className="text-gray-900">everyday confidence</span>
@@ -59,7 +59,7 @@ const AboutUs = () => {
 
                             {/* ==================== BODY TEXT ==================== */}
                             {/* Exact paragraph spacing, neutral color, readable line height */}
-                            <div className="w-75 space-y-6 text-base md:text-base text-black leading-snug font-[Poppins]">
+                            <div className="w-55 md:w-75 space-y-6 text-xs md:text-base text-black leading-tight font-[Poppins] px-3 md:px-0 pb-12 md:pb-0">
                                 <p className='text-center'>
                                     Our brand brings fashion and self-care together in one seamless shopping experience. From
                                     stylish outfits to skincare and haircare essentials, every product is carefully selected to
