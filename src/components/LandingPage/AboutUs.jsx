@@ -59,7 +59,7 @@ const AboutUs = () => {
 
                             {/* ==================== BODY TEXT ==================== */}
                             {/* Exact paragraph spacing, neutral color, readable line height */}
-                            <div className="w-55 md:w-75 space-y-6 text-xs md:text-base text-black leading-tight font-[Poppins] px-3 md:px-0 pb-12 md:pb-0">
+                            <div className="w-55 md:w-75 space-y-6 text-xs md:text-base text-black leading-tight md:leading-snug font-[Poppins] px-3 md:px-0 pb-12 md:pb-0">
                                 <p className='text-center'>
                                     Our brand brings fashion and self-care together in one seamless shopping experience. From
                                     stylish outfits to skincare and haircare essentials, every product is carefully selected to

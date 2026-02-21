@@ -79,7 +79,7 @@ const NewArrivals = () => {
   };
 
   return (
-    <section className="bg-white py-12 md:py-20">
+    <section className="bg-white py-2 md:py-0">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* ==================== SECTION TITLE ==================== */}
         {/* "New Arrivals" with orange split styling */}
