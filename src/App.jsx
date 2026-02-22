@@ -5,6 +5,8 @@ import Category from './components/LandingPage/Category'
 import NewArrivals from './components/LandingPage/NewArrivals'
 import AboutUs from './components/LandingPage/AboutUs'
 import FlashSales from './components/LandingPage/FlashSales'
+import TestimonialSection from './components/LandingPage/Testimonial'
+import FAQ from './components/LandingPage/FAQ'
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <NewArrivals/>
       <AboutUs/>
       <FlashSales/>
+      <TestimonialSection/>
+      <FAQ/>
     </>
   )
 }
