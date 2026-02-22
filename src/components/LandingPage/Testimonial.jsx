@@ -80,7 +80,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8 xl:px-12">
+    <section className="w-full h-auto bg-white md:py-16 px-0 md:px-4">
       <motion.div
         className="max-w-6xl mx-auto"
         variants={containerVariants}

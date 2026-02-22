@@ -7,6 +7,8 @@ import AboutUs from './components/LandingPage/AboutUs'
 import FlashSales from './components/LandingPage/FlashSales'
 import TestimonialSection from './components/LandingPage/Testimonial'
 import FAQ from './components/LandingPage/FAQ'
+import Newsletter from './components/LandingPage/NewsLetter'
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -14,7 +16,6 @@ function App() {
 
   return (
     <>
-
       <Navbar />
       <Hero/>
       <Category/>
@@ -23,6 +24,8 @@ function App() {
       <FlashSales/>
       <TestimonialSection/>
       <FAQ/>
+      <Newsletter/>
+      <Footer/>
     </>
   )
 }

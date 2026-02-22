@@ -64,7 +64,7 @@ const FAQ = () => {
 
   return (
     <section className="bg-gray-50 py-16 md:py-24">
-      <div className="max-w-3xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* ==================== SMALL LABEL ==================== */}
         {/* "FAQ" – appears first */}
         <motion.p
