@@ -1,35 +1,65 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaFacebookF, FaTwitter } from 'react-icons/fa'; // Assuming the 'o' icon represents Twitter/X; adjust if needed
+import { FaLinkedin, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i) => ({
+  // Stagger parent for columns
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
       opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.3, duration: 0.5 },
-    }),
+      transition: {
+        staggerChildren: 0.18,
+        delayChildren: 0.4,
+      },
+    },
+  };
+
+  const columnVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+  };
+
+  const socialVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, delay: 1.2 },
+    },
+  };
+
+  const copyrightVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.8, delay: 1.6 } },
   };
 
   return (
-    <footer className="bg-[#ED6A2C] text-white py-8"> {/* Orange background matching the design */}
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Information Section: Contains logo, description, and social icons */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={sectionVariants}
-            custom={0}
-            className="space-y-4"
-          >
-            <h1 className="text-3xl font-[cursive] tracking-wide">Fashly</h1> {/* Cursive font for logo */}
-            <p className="text-sm leading-relaxed">
-              Where modern design meets with effortless style designed for everyday comfort and confidence to express your individuality.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-gray-300">
+    <footer className="bg-orange-600 text-white pt-16 pb-10">
+      <div className="max-w-7xl mx-auto  ">
+        {/* ==================== MAIN COLUMNS ==================== */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col md:flex-row justify-between w-full mb-16"
+        >
+          {/* ==================== BRAND / ABOUT COLUMN ==================== */}
+          <motion.div variants={columnVariants} className="space-y-6">
+              <h3 className="text-3xl md:text-2xl  tracking-tight font-[Pacifico]">
+                Fashly
+              </h3>
+              <p className="text-orange-100 text-base leading-relaxed max-w-xs">
+                Where modern design meets with effortless style designed for everyday
+                comfort and confidence to express your individuality
+              </p>
+
+              {/* ==================== SOCIAL ICONS ==================== */}
+              <motion.div
+                variants={socialVariants}
+                className="flex gap-5 text-2xl"
+              >
+                <a href="#" className="text-white hover:text-gray-300">
                 <div className="w-8 h-8 flex items-center justify-center border border-white rounded-full"> {/* Circle (ellipse approximation) for icons */}
                   <FaLinkedin size={20} />
                 </div>
@@ -44,83 +74,60 @@ const Footer = () => {
                   <FaTwitter size={20} />
                 </div>
               </a>
-            </div>
-          </motion.div>
+              </motion.div>
+            </motion.div>
 
-          {/* Quick Links Section: List of navigation links */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={sectionVariants}
-            custom={1}
-            className="space-y-4"
-          >
-            <h2 className="text-lg font-semibold">Quick Links</h2>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:underline">Home</a></li>
-              <li><a href="#" className="hover:underline">About Us</a></li>
-              <li><a href="#" className="hover:underline">Offers & Deals</a></li>
-              <li><a href="#" className="hover:underline">Contact Us</a></li>
-            </ul>
-          </motion.div>
+          <div>
+            
 
-          {/* Help Section: List of support-related links */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={sectionVariants}
-            custom={2}
-            className="space-y-4"
-          >
-            <h2 className="text-lg font-semibold">Help</h2>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:underline">Delivery Information</a></li>
-              <li><a href="#" className="hover:underline">Payment Methods</a></li>
-              <li><a href="#" className="hover:underline">Contact Us</a></li>
-              <li><a href="#" className="hover:underline">Return & Refund Policy</a></li>
-            </ul>
-          </motion.div>
+            {/* ==================== QUICK LINKS COLUMN ==================== */}
+            <div className=' w-3xl grid grid-cols-3'>
+              <motion.div variants={columnVariants}>
+                <h4 className="text-xl font-semibold mb-6">Quick Links</h4>
+                <ul className="space-y-3 text-orange-100">
+                  <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Offers & Deals</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">FAQS</a></li>
+                </ul>
+              </motion.div>
 
-          {/* Contact Info Section: Phone, email, and address details */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={sectionVariants}
-            custom={3}
-            className="space-y-4"
-          >
-            <h2 className="text-lg font-semibold">Contact Info</h2>
-            <ul className="space-y-2 text-sm">
-              <li>+123-345-678</li>
-              <li>fahlyll@gmail.com</li>
-              <li>12 Kingtown rd. New Haven</li>
-            </ul>
-          </motion.div>
-        </div>
 
-        {/* FAQs Section: Header for frequently asked questions */}
-        <motion.h2
+              {/* ==================== HELP COLUMN ==================== */}
+            <motion.div variants={columnVariants}>
+              <h4 className="text-xl font-semibold mb-6">Help</h4>
+              <ul className="space-y-3 text-orange-100">
+                <li><a href="#" className="hover:text-white transition-colors">Delivery Information</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Payment methods</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Contact us</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Return & Refund Policy</a></li>
+                {/* <li><a href="#" className="hover:text-white transition-colors">FAQS</a></li> */}
+              </ul>
+            </motion.div>
+
+            {/* ==================== CONTACT INFO COLUMN ==================== */}
+            <motion.div variants={columnVariants}>
+              <h4 className="text-xl font-semibold mb-6">Contact Info</h4>
+              <ul className="space-y-4 text-orange-100">
+                <li>+0123-345-678</li>
+                <li>fahly111@gmail.com</li>
+                <li>12 Kingstown rd. New Haven</li>
+              </ul>
+            </motion.div>
+            </div> 
+          </div>
+        </motion.div>
+
+        {/* ==================== COPYRIGHT BAR ==================== */}
+        <motion.div
+          variants={copyrightVariants}
           initial="hidden"
           animate="visible"
-          variants={sectionVariants}
-          custom={4}
-          className="text-lg font-semibold text-center mt-8"
+          className="pt-10 border-t border-white text-center text-sm text-orange-200"
         >
-          FAQs
-        </motion.h2>
-
-        <hr className="my-4 border-white/30" /> {/* Thin horizontal line matching the design */}
-
-        {/* Copyright Section: Footer copyright notice */}
-        <motion.p
-          initial="hidden"
-          animate="visible"
-          variants={sectionVariants}
-          custom={5}
-          className="text-center text-sm"
-        >
-          Copyright 2026 Fashion Website Design. All Rights Reserved.
-        </motion.p>
+          Copyright 2026 fashion Website Design. All Rights Reserved
+        </motion.div>
       </div>
     </footer>
   );
