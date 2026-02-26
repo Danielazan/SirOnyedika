@@ -1,33 +1,19 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/LandingPage/Hero'
-import Category from './components/LandingPage/Category'
-import NewArrivals from './components/LandingPage/NewArrivals'
-import AboutUs from './components/LandingPage/AboutUs'
-import FlashSales from './components/LandingPage/FlashSales'
-import TestimonialSection from './components/LandingPage/Testimonial'
-import FAQ from './components/LandingPage/FAQ'
-import Newsletter from './components/LandingPage/NewsLetter'
-import Footer from "./components/Footer"
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ShopPage from "./pages/Shop";
+
+import ProductPage from "./components/ShopPages/ProductPage";
+import Home from "./pages/Home";
 
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <Navbar />
-      <Hero/>
-      <Category/>
-      <NewArrivals/>
-      <AboutUs/>
-      <FlashSales/>
-      <TestimonialSection/>
-      <FAQ/>
-      <Newsletter/>
-      <Footer/>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/shop/:productId" element={<ProductPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
