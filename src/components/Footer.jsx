@@ -81,7 +81,7 @@ const Footer = () => {
             
 
             {/* ==================== QUICK LINKS COLUMN ==================== */}
-            <div className=' w-3xl grid grid-cols-3'>
+            <div className=' w-full grid grid-cols-3 '>
               <motion.div variants={columnVariants}>
                 <h4 className="text-xl font-semibold mb-6">Quick Links</h4>
                 <ul className="space-y-3 text-orange-100">
